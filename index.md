@@ -39,9 +39,9 @@ the objects lifetime, and a const lvalue reference to a temporary subobject exte
 parent objects lifetime.
 However, this is not the case for the function `get()`, as evidenced by the dangling reference
 in the second buggy line.
-This is because we aren\'t returning a temporary subobject, we are returning an lvalue reference.
+This is because we aren't returning a temporary subobject, we are returning an lvalue reference.
 
-In the case you can\'t expose the member variable directly, I believe the fix is to overload
+In the case you can't expose the member variable directly, I believe the fix is to overload
 on the objects reference type as follows.
 
 ```cpp
