@@ -2,9 +2,9 @@
 title: On why three is better than two
 ---
 
-# On why three is better than two
-
 ## Some h2 header
+
+A [link](http://terrelln.me) is right here linked.
 
 Whats wrong with the following code (other than the fact that it is useless)?
 

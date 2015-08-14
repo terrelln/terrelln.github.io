@@ -7,7 +7,7 @@
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-min.css">
     <!--<![endif]-->
-    <link rel="stylesheet" type="text/css" href="css/github.css">
+    <link rel="stylesheet" type="text/css" href="/css/github.css">
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Alegreya|Roboto:100italic,300'>
 
     <title>{{ page.title }} - Nick Terrell</title>
@@ -16,7 +16,25 @@
 
     <style>
         .l-box {
-            padding: 0em 1em 0em 1em;
+            padding: 0rem 1rem 0rem 1rem;
+        }
+        .post-title { }
+        .post-date {
+            display: block;
+            margin-top: -1rem;
+            margin-bottom: 0rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
+            font-size: 1rem;
+            font-style: italic;
+        }
+        a {
+            color: #3b96d6;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            text-decoration: underline;
         }
         html {
             font-size: 16px;
@@ -24,13 +42,11 @@
         h1 {
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
-            text-align: center;
             font-size: 2rem;
         }
         h2 {
             font-family: 'Roboto', sans-serif;
             font-weight: 100;
-            font-style: italic;
             font-size: 1.5rem;
         }
         p {
@@ -39,7 +55,7 @@
             font-size: 1rem;
         }
         pre {
-            padding: 0em 1em 0em 1em;
+            padding: 0rem 1rem 0rem 1rem;
         }
         /*
         When setting the primary font stack, apply it to the Pure grid units along
@@ -58,6 +74,18 @@
         <div class="pure-u-0 pure-u-md-4-24"></div>
         <div class="pure-u-1 pure-u-md-16-24">
             <div class="l-box">
+                <h1 class="post-title"> {{ page.title }}</h1>
+                <span class="post-date">
+                    {% assign d = page.date | date: "%-d"  %}
+                    {{ page.date | date: "%B" }}
+                    {% case d %}
+                      {% when '1' or '21' or '31' %}{{ d }}st
+                      {% when '2' or '22' %}{{ d }}nd
+                      {% when '3' or '23' %}{{ d }}rd
+                      {% else %}{{ d }}th
+                    {% endcase %},
+                    {{ page.date | date: "%Y" }}
+                </span>
                 {{ content }}
             </div>
         </div>
