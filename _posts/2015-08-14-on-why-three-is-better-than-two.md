@@ -9,6 +9,23 @@ A [link](http://terrelln.me) is right here linked.
 Whats wrong with the following code (other than the fact that it is useless)?
 
 ```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+namespace {
+void doStuff() {
+    std::cout << "hello world" << '!' << std::endl;
+}
+
+int main(int argc, char** argv) {
+    doStuff();
+}
+}
+```
+
+```cpp
 template <typename T>
 class move_in_wrapper {
     T value_;
