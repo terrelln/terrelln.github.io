@@ -4,6 +4,8 @@ title: On why three is better than two
 
 # On why three is better than two
 
+## Some h2 header
+
 Whats wrong with the following code (other than the fact that it is useless)?
 
 ```cpp
