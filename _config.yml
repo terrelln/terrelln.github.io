@@ -1,9 +1,5 @@
+domain: terrelln.github.io
+url: https://terrelln.github.io
 markdown: redcarpet
 highlighter: pygments
-
-defaults:
-  -
-    values:
-      layout: "default"
-
 theme: jekyll-theme-minimal
