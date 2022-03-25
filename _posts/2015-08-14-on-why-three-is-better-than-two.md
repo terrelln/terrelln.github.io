@@ -1,5 +1,7 @@
 ---
+layout: post
 title: On why three is better than two
+author: Nick Terrell
 ---
 
 ## Some h2 header
